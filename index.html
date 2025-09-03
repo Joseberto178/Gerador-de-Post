@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gerador de Posts - Mente Bilionária</title>
+    <meta name="description" content="Gerador de posts para Instagram sobre mente bilionária e crescimento pessoal">
+    <meta name="keywords" content="instagram, posts, mente bilionária, crescimento, mindset">
+    <meta property="og:title" content="Gerador de Posts - Mente Bilionária">
+    <meta property="og:description" content="Crie posts incríveis para seu Instagram sobre mente bilionária">
+    <meta name="twitter:title" content="Gerador de Posts - Mente Bilionária">
+    <meta name="twitter:description" content="Crie posts incríveis para seu Instagram sobre mente bilionária">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <!-- Predefined Tailwind CSS, use it as needed, or update base on your -->
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #f59e0b;
+            --accent: #10b981;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-amber-500 hover:bg-amber-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors;
+        }
+        
+        .btn-secondary {
+            @apply bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-6 rounded-lg transition-colors;
+        }
+        
+        .post-card {
+            @apply bg-white rounded-xl shadow-lg p-6 border border-gray-100;
+        }
+        
+        .gradient-text {
+            @apply bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent;
+        }
+    }
+
+    @layer utilities {
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/PostGenerator.js"></script>
+    <script type="text/babel" src="components/PostCard.js"></script>
+    <script type="text/babel" src="utils/postTemplates.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
